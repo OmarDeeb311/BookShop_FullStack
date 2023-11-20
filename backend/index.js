@@ -8,20 +8,15 @@ const port = 8800;
 
 const db = mysql.createConnection({
   host: "localhost",
-  user: "root",
-  password: "00000000",
-  database: "first-fullstackapp",
-});
-
-app.get("/", (req, res) => {
-  res.json("Hello This is the backend");
+  user: "your_username",
+  password: "your_password",
+  database: "db_name",
 });
 
 app.get("/books", (req, res) => {
   const query = "SELECT * FROM books";
   db.query(query, (err, data) => {
     if (err) return res.json(err);
-    console.log("All Books Returned");
     res.json(data);
   });
 });
