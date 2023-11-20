@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  /* --color-one: #e7cbcb;
+  --color-two: #c88ea7;
+  --color-three: #99627a;
+  --color-four: #643843; */
+  --color-one: #dde6ed;
+  --color-two: #9db2bf;
+  --color-three: #526d82;
+  --color-four: #27374d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-one);
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: 0;
+}
+
+/*! Start Home Page */
+
+.header {
+  display: flex;
+  text-align: center;
+  background: var(--color-four);
+  padding: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header h4 {
+  color: var(--color-one);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.addNewBook {
+  position: relative;
+  padding: 5px 15px;
+  background-color: transparent;
+  color: #198754;
+  font-weight: 400;
+  font-size: 18px;
+  border-radius: 6px;
+  transition: 0.15s all ease-in-out;
+  border: 2px solid #198754;
+}
+.addNewBook:hover {
+  background-color: #198754;
+  color: white;
+}
+
+.addNewBook a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.deleteAll {
+  padding: 5px 15px;
+  background: transparent;
+  color: #dc3545;
+  font-weight: 400;
+  font-size: 18px;
+  border-radius: 6px;
+  transition: 0.15s all ease-in-out;
+  border: 2px solid #dc3545;
+}
+
+.deleteAll:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.addBooks {
+  font-size: 40px;
+  text-align: center;
+  background: var(--color-three);
+  padding: 20px;
+  color: var(--color-one);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 20px;
+  gap: 40px;
+  justify-content: center;
+}
+
+.container .box {
+  background: var(--color-three);
+  padding: 0px 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(25% - 30px);
+  box-shadow: 0 0 6px 0px var(--color-three);
+}
+
+@media (max-width: 997px) {
+  .container .box {
+    width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 767px) {
+  .container .box {
+    width: calc(80% - 30px);
+  }
+}
+
+.container .box .name {
+  padding: 10px 0px 5px 0px;
+  border-bottom: 1px solid var(--color-four);
+}
+
+.container .box .name h5 {
+  color: var(--color-one);
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.container .box .name span {
+  color: black;
+  font-weight: 500;
+}
+
+.container .box .cover {
+  padding: 10px 0px 5px 0px;
+  border-bottom: 1px solid var(--color-four);
+}
+
+.container .box .title {
+  padding: 10px 0px 5px 0px;
+  border-bottom: 1px solid var(--color-four);
+}
+.container .box .title p {
+  font-weight: 500;
+}
+.container .box .title span {
+  color: var(--color-one);
+  letter-spacing: 1px;
+}
+
+.container .box .price {
+  padding: 10px 0px 5px 0px;
+  border-bottom: 1px solid var(--color-four);
+}
+.container .box .price span:first-child {
+  font-weight: 500;
+}
+.container .box .price span:last-child {
+  color: #582445;
+  font-weight: 600;
+}
+
+.container .box .buttons-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px 0px;
+}
+
+.container .box button {
+  position: relative;
+  padding: 5px 10px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: white;
+  border-radius: 6px;
+}
+
+.container .box button a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container .box button:first-of-type {
+  background: transparent;
+  color: #0dcaf0;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 6px;
+  transition: 0.15s all ease-in-out;
+  border: 2px solid #0dcaf0;
+}
+
+.container .box button:first-of-type:hover {
+  background-color: #0dcaf0;
+  color: black;
+}
+
+.container .box button:last-child {
+  background: transparent;
+  color: #dc3545;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 6px;
+  transition: 0.15s all ease-in-out;
+  border: 2px solid #dc3545;
+}
+.container .box button:last-child:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+/*! End Home Page */
+
+/*! Start Add Page */
+
+.add {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 30px auto;
+  padding: 20px 30px 30px;
+  gap: 10px;
+  background: var(--color-three);
+  box-shadow: 0 0 5px 0px var(--color-three);
+  border-radius: 10px;
+}
+
+.add h1 {
+  text-align: center;
+  color: var(--color-one);
+  letter-spacing: 2px;
+}
+
+.add input[type="text"],
+.add input[type="file"],
+.add input[type="number"] {
+  flex: 1;
+  padding: 10px;
+  background: var(--color-two);
+  transition: 0.3s all ease;
+  border: 1px solid var(--color-four);
+  border-radius: 6px;
+  color: var(--color-four);
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-family: inherit;
+}
+
+.add input[type="text"]:focus,
+.add input[type="file"]:focus,
+.add input[type="number"]:focus {
+  outline: 0;
+  box-shadow: 0 0 6px 2px var(--color-one);
+  border-color: var(--color-one);
+}
+
+.add input[type="text"]::placeholder,
+.add input[type="file"]::placeholder,
+.add input[type="number"]::placeholder {
+  color: var(--color-four);
+  opacity: 0.5;
+}
+.add input[type="submit"]:focus {
+  outline: 0;
+  box-shadow: 0 0 6px 2px var(--color-one);
+}
+
+.input-groups {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.input-groups label {
+  color: var(--color-one);
+  font-weight: 400;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons button,
+.buttons input {
+  position: relative;
+  border: 1px solid;
+  cursor: pointer;
+  background-color: transparent;
+  width: fit-content;
+  padding: 15px 80px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-one);
+  border-color: var(--color-one);
+  transition: 0.15s all ease-in-out;
+  border-radius: 6px;
+}
+
+.buttons input:hover {
+  background-color: var(--color-one);
+  border-color: var(--color-one);
+  color: var(--color-four);
+}
+
+.buttons button a {
+  transition: 0.15s all ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #dc3545;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons button {
+  border-color: #dc3545;
+}
+
+.buttons button:hover a {
+  color: white;
+}
+
+.buttons button:hover {
+  background-color: #dc3545;
+}
+
+.upload {
+  position: relative;
+  border: 1px solid;
+  cursor: pointer;
+  background-color: transparent;
+  width: fit-content;
+  padding: 15px 80px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-one);
+  border-color: var(--color-one);
+  transition: 0.15s all ease-in-out;
+  border-radius: 6px;
+  align-self: center;
+}
+
+.upload:hover {
+  background-color: var(--color-one);
+  border-color: var(--color-one);
+  color: var(--color-four);
+}
+
+/*! End Add Page */
+
+/*! Start Loading Page */
+
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -500%);
+}
+
+.parent::after {
+  content: "Please Wait...";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  animation-name: flash;
+  animation-duration: 600ms;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  width: 220px;
+  font-family: cursive;
+}
+
+@keyframes flash {
+  0% {
+    transform: translate(-50%, 150%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, 100%);
+    opacity: 0.4;
+  }
+}
+
+.parent div {
+  animation-name: up-and-down;
+  animation-duration: 0.6s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  height: 30px;
+  width: 30px;
+  background: black;
+  margin: 0 2px;
+  border-radius: 50%;
+}
+
+.two {
+  animation-delay: 0.2s;
+}
+
+.three {
+  animation-delay: 0.4s;
+}
+
+@keyframes up-and-down {
+  to {
+    opacity: 0.2;
+    transform: translateY(-30px);
+  }
+}
+
+/*! End Loading Page */
